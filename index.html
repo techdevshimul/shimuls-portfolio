@@ -324,6 +324,9 @@
         </div>
       </div>
 
+      <button id="goTopBtn" onclick="topFunction()" class="">
+        <img src="./images//icons/up-arrow.png" alt="go to top button" />
+      </button>
       <!-- -------------------------------------------- -->
 
       <hr />
@@ -344,7 +347,7 @@
       function handleSubmit(e) {
         e.preventDefault();
         console.log(
-          `Submitted - 
+          `Submitted -
           Name : ${name.value}
           Email : ${email.value}
           Message : ${message.value}
@@ -354,6 +357,30 @@
         name.value = "";
         email.value = "";
         message.value = "";
+      }
+
+      // Go To Top Button --------------
+
+      let goTopBtn = document.getElementById("goTopBtn");
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          goTopBtn.style.display = "block";
+        } else {
+          goTopBtn.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>

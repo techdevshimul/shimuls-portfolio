@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(40, 40, 40);
   color: white;
@@ -554,6 +558,49 @@ nav > ul > li:last-child a {
 @keyframes connect-popout {
   from {
     width: 120px;
+  }
+}
+
+/* Go To Top Button -------------- */
+#goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+}
+
+#goTopBtn > img {
+  border-radius: 50%;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+#goTopBtn > img:hover {
+  background-color: #255eee;
+  animation: go-to-top-hover 0.2s ease-in;
+}
+
+#goTopBtn > img {
+  animation: go-to-top 0.2s ease-in;
+}
+
+@keyframes go-to-top-hover {
+  from {
+    background-color: white;
+  }
+}
+
+@keyframes go-to-top {
+  from {
+    background-color: #255eee;
   }
 }
 
