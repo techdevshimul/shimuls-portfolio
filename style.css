@@ -21,9 +21,6 @@ nav {
     opacity: 0%;
     transform: translateY(-100px);
   }
-
-  to {
-  }
 }
 
 .brand {
@@ -60,6 +57,23 @@ ul > li > a {
 
 ul > li > a:hover {
   background-color: rgb(16, 103, 225);
+  animation: nav-link-popover 0.2s ease-in;
+}
+
+ul > li > a {
+  animation: nav-link-popout 0.2s ease-in;
+}
+
+@keyframes nav-link-popover {
+  from {
+    background-color: transparent;
+  }
+}
+
+@keyframes nav-link-popout {
+  from {
+    background-color: rgb(16, 103, 225);
+  }
 }
 
 .active {
@@ -88,6 +102,24 @@ nav > ul > li:last-child a {
 nav > ul > li:last-child a:hover {
   color: black;
   background-color: white;
+  animation: nav-link-resume-popover 0.2s ease-in;
+}
+
+nav > ul > li:last-child a {
+  animation: nav-link-resume-popout 0.2s ease-in;
+}
+
+@keyframes nav-link-resume-popover {
+  from {
+    color: white;
+    background-color: transparent;
+  }
+}
+
+@keyframes nav-link-resume-popout {
+  from {
+    background-color: white;
+  }
 }
 
 /* Welcome Section Starts ---------------- */
@@ -106,9 +138,6 @@ nav > ul > li:last-child a:hover {
 @keyframes fade-in {
   from {
     opacity: 0%;
-  }
-  to {
-    opacity: 100%;
   }
 }
 
@@ -142,9 +171,6 @@ nav > ul > li:last-child a:hover {
     opacity: 0%;
     transform: translateX(-100px);
   }
-  to {
-    opacity: 100%;
-  }
 }
 
 .hero-descriptions {
@@ -155,9 +181,6 @@ nav > ul > li:last-child a:hover {
   from {
     opacity: 0%;
     transform: translateX(100px);
-  }
-  to {
-    opacity: 100%;
   }
 }
 
@@ -176,6 +199,23 @@ nav > ul > li:last-child a:hover {
 
 .primary:hover {
   background-color: rgb(0, 49, 209);
+  animation: primary-btn-popover 0.2s ease-in;
+}
+
+.primary {
+  animation: primary-btn-popout 0.2s ease-in;
+}
+
+@keyframes primary-btn-popover {
+  from {
+    background-color: rgb(23, 114, 242);
+  }
+}
+
+@keyframes primary-btn-popout {
+  from {
+    background-color: rgb(0, 49, 209);
+  }
 }
 
 .secondary {
@@ -186,6 +226,25 @@ nav > ul > li:last-child a:hover {
 .secondary:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(69, 69, 69);
+  animation: secondary-btn-popover 0.2s ease-in;
+}
+
+.secondary {
+  animation: secondary-btn-popout 0.2s ease-in;
+}
+
+@keyframes secondary-btn-popover {
+  from {
+    color: white;
+    background-color: rgb(73, 73, 73);
+  }
+}
+
+@keyframes secondary-btn-popout {
+  from {
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 .hero-buttons > a > div {
@@ -427,6 +486,27 @@ nav > ul > li:last-child a:hover {
 
 .contact-links > a > img {
   width: 100px;
+}
+
+.contact-links > a > img:hover {
+  width: 120px;
+  animation: connect-popover 0.3s ease-in;
+}
+
+.contact-links > a > img {
+  animation: connect-popout 0.3s ease-in;
+}
+
+@keyframes connect-popover {
+  from {
+    width: 100px;
+  }
+}
+
+@keyframes connect-popout {
+  from {
+    width: 120px;
+  }
 }
 
 /* Footer Section Starts ------------------- */
