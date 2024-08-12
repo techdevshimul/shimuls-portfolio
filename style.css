@@ -2,6 +2,7 @@ body {
   background-color: rgb(40, 40, 40);
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  animation: fade-in 1s ease-in;
 }
 
 .container {
@@ -10,6 +11,20 @@ body {
 }
 
 /* Nav Section Starts ----------------- */
+
+nav {
+  animation: fade-in-from-top 1s ease-in;
+}
+
+@keyframes fade-in-from-top {
+  from {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+
+  to {
+  }
+}
 
 .brand {
   display: flex;
@@ -81,10 +96,20 @@ nav > ul > li:last-child a:hover {
   margin: 100px auto;
   max-width: 800px;
   text-align: center;
+  animation: fade-in 1s ease-in;
 }
 
 .welcome-section > h1 {
   font-size: 48px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 /* Hero Section Starts -------------------- */
@@ -109,6 +134,31 @@ nav > ul > li:last-child a:hover {
   max-width: 350px;
   border-radius: 20px;
   margin: 0 20px;
+  animation: fade-in-from-right 1s ease-in;
+}
+
+@keyframes fade-in-from-right {
+  from {
+    opacity: 0%;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.hero-descriptions {
+  animation: fade-in-from-left 1s ease-in;
+}
+
+@keyframes fade-in-from-left {
+  from {
+    opacity: 0%;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .btn {
